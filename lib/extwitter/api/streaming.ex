@@ -167,7 +167,7 @@ defmodule ExTwitter.API.Streaming do
   def is_end_of_message(part), do: part |> String.ends_with?(@crlf)
 
   defp parse_message_type(%{friends: friends}, _) do
-    {:friends, friends}
+    # {:friends, friends}
   end
 
   defp parse_message_type(%{event: "follow"} = msg, _) do
