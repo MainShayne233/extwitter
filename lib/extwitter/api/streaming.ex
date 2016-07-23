@@ -170,21 +170,21 @@ defmodule ExTwitter.API.Streaming do
     # {:friends, friends}
   # end
 
-  defp parse_message_type(%{event: "follow"} = msg, _) do
-    {:follow, msg}
-  end
-
-  defp parse_message_type(%{event: "unfollow"} = msg, _) do
-    {:unfollow, msg}
-  end
-
-  defp parse_message_type(%{event: _event} = msg, _) do
-    {:event, msg}
-  end
-
-  defp parse_message_type(%{text: _text} = msg, _) do
-    {:msg, msg}
-  end
+  # defp parse_message_type(%{event: "follow"} = msg, _) do
+  #   {:follow, msg}
+  # end
+  #
+  # defp parse_message_type(%{event: "unfollow"} = msg, _) do
+  #   {:unfollow, msg}
+  # end
+  #
+  # defp parse_message_type(%{event: _event} = msg, _) do
+  #   {:event, msg}
+  # end
+  #
+  # defp parse_message_type(%{text: _text} = msg, _) do
+  #   {:msg, msg}
+  # end
 
   defp parse_message_type(msg, configs) do
     if configs[:receive_messages] do
